@@ -1,0 +1,11 @@
+--- darkice-0.7/configure.in~	Mon Jul 22 14:28:09 2002
++++ darkice-0.7/configure.in	Mon Jul 22 14:28:09 2002
+@@ -19,7 +19,7 @@
+ AC_TYPE_SIZE_T()
+ 
+ AC_CHECK_LIB( socket, socket)
+-AC_CHECK_LIB( nsl, gethostbyname)
++AC_CHECK_FUNC( gethostbyname, [], AC_CHECK_LIB( nsl, gethostbyname))
+ AC_CHECK_LIB( rt, sched_getscheduler)
+ 
+ 

@@ -38,7 +38,7 @@ serwerów IceCast2.
 rm -f missing
 aclocal
 autoconf
-automake -a -c
+automake -a -c -f
 %configure \
 	--with-lame \
 	--with-vorbis

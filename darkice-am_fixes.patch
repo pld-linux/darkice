@@ -1,0 +1,14 @@
+--- darkice-0.10/src/Makefile.am~	Mon Jul 22 16:04:58 2002
++++ darkice-0.10/src/Makefile.am	Mon Jul 22 16:04:58 2002
+@@ -1,8 +1,7 @@
+ bin_PROGRAMS = darkice
+-CXXFLAGS = -g -pedantic -Wall
+-#CXXFLAGS = -O2 -pedantic -Wall
+-INCLUDES = @LAME_INCFLAGS@ @VORBIS_INCFLAGS@
+-LDADD = @LAME_LDFLAGS@ @VORBIS_LDFLAGS@
++
++INCLUDES = $(LAME_INCFLAGS) $(VORBIS_INCFLAGS)
++LDADD = $(LAME_LDFLAGS) $(VORBIS_LDFLAGS)
+ 
+ darkice_SOURCES =   AudioEncoder.h\
+                     AudioSource.h\

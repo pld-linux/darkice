@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	c41c6be831d22b37847d65c814160bb1
 Patch0:		%{name}-shared.patch
 Patch1:		%{name}-no_libnsl.patch
 Patch2:		%{name}-am_fixes.patch

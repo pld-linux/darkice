@@ -1,12 +1,12 @@
 Summary:	DarkIce live IceCast / ShoutCast streamer
 Summary(pl):	DarkIce live IceCast / ShoutCast streamer
 Name:		darkice
-Version:	0.10
+Version:	0.13.1
 Release:	1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	c41c6be831d22b37847d65c814160bb1
+# Source0-md5:	d6a11d63e1d97f7bbf68c76269a434a4
 Patch0:		%{name}-shared.patch
 Patch1:		%{name}-no_libnsl.patch
 Patch2:		%{name}-am_fixes.patch

@@ -18,7 +18,7 @@ BuildRequires:	lame-libs-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libvorbis-devel >= 1:1.0
 BuildRequires:	readline-devel
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 DarkIce is an IceCast, IceCast2 and ShoutCast live audio streamer. It

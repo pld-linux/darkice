@@ -5,7 +5,7 @@ Version:	0.10
 Release:	1
 License:	GPL
 Group:		Networking/Daemons
-Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Patch0:		%{name}-shared.patch
 Patch1:		%{name}-no_libnsl.patch
 Patch2:		%{name}-am_fixes.patch

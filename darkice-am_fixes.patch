@@ -1,14 +1,8 @@
---- darkice-0.10/src/Makefile.am~	Mon Jul 22 16:04:58 2002
-+++ darkice-0.10/src/Makefile.am	Mon Jul 22 16:04:58 2002
-@@ -1,8 +1,7 @@
+--- darkice-0.13.1/src/Makefile.am.orig	Wed Feb 12 16:15:17 2003
++++ darkice-0.13.1/src/Makefile.am	Mon May 26 22:21:31 2003
+@@ -1,5 +1,4 @@
  bin_PROGRAMS = darkice
--CXXFLAGS = -g -pedantic -Wall
--#CXXFLAGS = -O2 -pedantic -Wall
--INCLUDES = @LAME_INCFLAGS@ @VORBIS_INCFLAGS@
--LDADD = @LAME_LDFLAGS@ @VORBIS_LDFLAGS@
-+
-+INCLUDES = $(LAME_INCFLAGS) $(VORBIS_INCFLAGS)
-+LDADD = $(LAME_LDFLAGS) $(VORBIS_LDFLAGS)
+-CXXFLAGS = -O2 -pedantic -Wall @PTHREAD_CFLAGS@
+ INCLUDES = @LAME_INCFLAGS@ @VORBIS_INCFLAGS@
+ LDADD = @PTHREAD_LIBS@ @LAME_LDFLAGS@ @VORBIS_LDFLAGS@
  
- darkice_SOURCES =   AudioEncoder.h\
-                     AudioSource.h\

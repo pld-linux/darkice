@@ -1,6 +1,6 @@
---- darkice-0.10/configure.in~	Tue Jul 23 06:23:29 2002
-+++ darkice-0.10/configure.in	Tue Jul 23 06:23:29 2002
-@@ -28,8 +28,6 @@
+--- darkice-0.13.1/configure.in.orig	Mon May 26 22:22:44 2003
++++ darkice-0.13.1/configure.in	Mon May 26 22:23:32 2003
+@@ -37,8 +37,6 @@
  dnl-----------------------------------------------------------------------------
  dnl link the lame library if requested
  dnl-----------------------------------------------------------------------------
@@ -9,7 +9,7 @@
  
  AC_ARG_WITH( lame,
  [  --with-lame             use lame for encoding mp3 streams [yes] ],
-@@ -57,14 +55,12 @@
+@@ -66,14 +64,12 @@
  else
      AC_MSG_RESULT( [building without lame] )
  fi
@@ -26,14 +26,14 @@
  AC_ARG_WITH( vorbis,
  [  --with-vorbis           use Ogg Vorbis for encoding vorbis streams [yes] ],
      USE_VORBIS=${withval}, USE_VORBIS="yes" )
-@@ -106,7 +102,9 @@
- if test "x${LAME_LDFLAGS}" = "x" -a "x${VORBIS_LDFLAGS}" = "x" ; then
-     AC_MSG_ERROR( [neither lame nor Ogg Vorbis configured])
+@@ -110,6 +106,10 @@
+     AC_MSG_RESULT( [building without Ogg Vorbis] )
  fi
+ 
 +AC_SUBST(VORBIS_INCFLAGS)
 +AC_SUBST(VORBIS_LDFLAGS)
++
++
  
- 
--AC_OUTPUT(Makefile src/Makefile man/Makefile)
-+AC_OUTPUT([Makefile src/Makefile man/Makefile])
- 
+ dnl-----------------------------------------------------------------------------
+ dnl make sure at least one of lame and vorbis present

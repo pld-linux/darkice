@@ -1,19 +1,21 @@
 Summary:	DarkIce live IceCast / ShoutCast streamer
 Summary(pl):	DarkIce live IceCast / ShoutCast streamer
 Name:		darkice
-Version:	0.7
+Version:	0.10
 Release:	1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Patch0:		%{name}-shared.patch
+Patch1:		%{name}-no_libnsl.patch
+Patch2:		%{name}-am_fixes.patch
 URL:		http://darkice.sourceforge.net/
-BuildRequires:	readline-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	lame-libs-devel
-BuildRequires:	libvorbis-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	libvorbis-devel >= 1:1.0
+BuildRequires:	readline-devel
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,6 +35,8 @@ serwerów IceCast2.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
@@ -51,14 +55,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf AUTHORS ChangeLog NEWS README TODO
-
 %clean
 rm -r $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS README TODO
 %config(noreplace) %attr(600,root,root) %{_sysconfdir}/*.cfg
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*

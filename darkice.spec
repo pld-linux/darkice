@@ -14,7 +14,7 @@ Patch3:		%{name}-ac25x.patch
 URL:		http://darkice.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	lame-libs-devel
+BuildRequires:	lame-libs-static
 BuildRequires:	libstdc++-devel
 BuildRequires:	libvorbis-devel >= 1:1.0
 BuildRequires:	readline-devel

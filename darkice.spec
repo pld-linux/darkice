@@ -5,7 +5,7 @@ Version:	0.14
 Release:	1
 License:	GPL
 Group:		Networking/Daemons
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/darkice/%{name}-%{version}.tar.gz
 # Source0-md5:	e196487f376ab29c43277add33be15be
 Patch0:		%{name}-shared.patch
 Patch1:		%{name}-no_libnsl.patch

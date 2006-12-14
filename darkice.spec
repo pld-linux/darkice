@@ -1,5 +1,5 @@
 Summary:	DarkIce live IceCast / ShoutCast streamer
-Summary(pl):	DarkIce live IceCast / ShoutCast streamer
+Summary(pl):	DarkIce - dostarczyciel strumieni IceCast/ShoutCast
 Name:		darkice
 Version:	0.14
 Release:	1
@@ -42,7 +42,6 @@ serwerów IceCast2.
 %patch3 -p1
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}

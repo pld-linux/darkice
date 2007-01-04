@@ -1,8 +1,0 @@
---- darkice-0.13.1/src/Makefile.am.orig	Wed Feb 12 16:15:17 2003
-+++ darkice-0.13.1/src/Makefile.am	Mon May 26 22:21:31 2003
-@@ -1,5 +1,4 @@
- bin_PROGRAMS = darkice
--CXXFLAGS = -O2 -pedantic -Wall @PTHREAD_CFLAGS@
- INCLUDES = @LAME_INCFLAGS@ @VORBIS_INCFLAGS@
- LDADD = @PTHREAD_LIBS@ @LAME_LDFLAGS@ @VORBIS_LDFLAGS@
- 

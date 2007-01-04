@@ -1,11 +1,11 @@
---- darkice-0.7/configure.in~	Mon Jul 22 14:28:09 2002
-+++ darkice-0.7/configure.in	Mon Jul 22 14:28:09 2002
-@@ -19,7 +19,7 @@
- AC_TYPE_SIZE_T()
+--- darkice-0.17.1/configure.in~	2007-01-03 17:09:56.000000000 +0100
++++ darkice-0.17.1/configure.in	2007-01-03 17:11:22.000000000 +0100
+@@ -22,7 +22,7 @@
+ AC_C_BIGENDIAN()
  
- AC_CHECK_LIB( socket, socket)
--AC_CHECK_LIB( nsl, gethostbyname)
-+AC_CHECK_FUNC( gethostbyname, [], AC_CHECK_LIB( nsl, gethostbyname))
- AC_CHECK_LIB( rt, sched_getscheduler)
+ AC_CHECK_LIB(socket, socket)
+-AC_CHECK_LIB(nsl, gethostbyname)
++AC_CHECK_FUNC(gethostbyname, [], AC_CHECK_LIB(nsl, gethostbyname))
+ AC_CHECK_LIB(rt, sched_getscheduler)
  
- 
+ AC_CHECK_FUNC(getaddrinfo, AC_DEFINE(HAVE_GETADDRINFO, 1, [Does function getaddrinfo exist?] ))

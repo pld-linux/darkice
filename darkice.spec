@@ -6,7 +6,7 @@ Release:	0.1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://dl.sourceforge.net/darkice/%{name}-%{version}.tar.gz
-# Source0-md5:	e196487f376ab29c43277add33be15be
+# Source0-md5:	91221134cec3d52af842a9d50c06ee7d
 Patch0:		%{name}-shared.patch
 Patch1:		%{name}-no_libnsl.patch
 Patch2:		%{name}-amd64.patch

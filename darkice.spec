@@ -1,22 +1,23 @@
 Summary:	DarkIce live IceCast / ShoutCast streamer
 Summary(pl):	DarkIce - dostarczyciel strumieni IceCast/ShoutCast
 Name:		darkice
-Version:	0.14
-Release:	1
+Version:	0.17.1
+Release:	0.1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://dl.sourceforge.net/darkice/%{name}-%{version}.tar.gz
 # Source0-md5:	e196487f376ab29c43277add33be15be
 Patch0:		%{name}-shared.patch
 Patch1:		%{name}-no_libnsl.patch
-Patch2:		%{name}-am_fixes.patch
-Patch3:		%{name}-ac25x.patch
+Patch2:		%{name}-amd64.patch
 URL:		http://darkice.sourceforge.net/
+BuildRequires:	alsa-lib-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	lame-libs-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libvorbis-devel >= 1:1.0
+BuildRequires:	pkgconfig
 BuildRequires:	readline-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,8 +39,7 @@ serwerów IceCast2.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-#%patch2 -p1
-%patch3 -p1
+%patch2 -p1
 
 %build
 %{__aclocal}

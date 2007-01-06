@@ -21,10 +21,7 @@ else
 	exit 0
 fi
 
-RETVAL=0
-# See how we were called.
-case "$1" in
-  start)
+start() {
 	# Check if the service is already running?
 	if [ ! -f /var/lock/subsys/darkice ]; then
 		msg_starting darkice
@@ -36,8 +33,9 @@ case "$1" in
 	else
 		msg_already_running Darkice
 	fi
-	;;
-  stop)
+}
+
+stop() {
 	# Stop daemons.
 	if [ -f /var/lock/subsys/darkice ]; then
 		msg_stopping darkice
@@ -47,10 +45,20 @@ case "$1" in
 	else
 		msg_not_running Darkice
 	fi
+}
+
+RETVAL=0
+# See how we were called.
+case "$1" in
+  start)
+  	start
+	;;
+  stop)
+  	stop
 	;;
   restart)
-	$0 stop
-	$0 start
+	stop
+	start
 	;;
   status)
 	status darkice

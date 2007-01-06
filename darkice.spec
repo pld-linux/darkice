@@ -99,7 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 %preun
 if [ "$1" = "0" ] ; then
 	%service darkice stop
-	/sbin/chkconfig --del darkice >&2
+	/sbin/chkconfig --del darkice
 fi
 
 %postun

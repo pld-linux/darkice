@@ -26,7 +26,7 @@ start() {
 	if [ ! -f /var/lock/subsys/darkice ]; then
 		msg_starting darkice
 		busy
-		daemon /usr/sbin/daemon -u darkice -o /var/log/darkice.log -P /var/run/darkice -n darkice -- /usr/bin/darkice -c /etc/darkice.cfg >/dev/null
+		daemon /usr/sbin/daemon -o /var/log/darkice.log -P /var/run/darkice -n darkice -- /usr/bin/darkice -c /etc/darkice.cfg >/dev/null
 		RETVAL=$?
 		[ $RETVAL -eq 0 ] && ok || fail
 		[ $RETVAL -eq 0 ] && touch /var/lock/subsys/darkice

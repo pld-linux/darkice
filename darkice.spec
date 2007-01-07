@@ -3,11 +3,12 @@
 # - add /etc/sysconfig/darkice with log level selection and maybe not dropping
 #   privs (so that realtime=yes could work)
 # - or some other way to keep realtime scheduling while not running as root
+# - add patch for dropping privs *after* turning on real-time scheduling
 Summary:	DarkIce live IceCast / ShoutCast streamer
 Summary(pl):	DarkIce - dostarczyciel strumieni IceCast/ShoutCast
 Name:		darkice
 Version:	0.17.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://dl.sourceforge.net/darkice/%{name}-%{version}.tar.gz
@@ -116,4 +117,4 @@ fi
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*
 %dir %attr(775,root,darkice) /var/run/darkice
-%attr(660,root,darkice) /var/log/darkice.log
+%attr(660,root,darkice) %ghost /var/log/darkice.log

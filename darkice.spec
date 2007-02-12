@@ -5,7 +5,7 @@
 # - or some other way to keep realtime scheduling while not running as root
 # - add patch for dropping privs *after* turning on real-time scheduling
 Summary:	DarkIce live IceCast / ShoutCast streamer
-Summary(pl):	DarkIce - dostarczyciel strumieni IceCast/ShoutCast
+Summary(pl.UTF-8):   DarkIce - dostarczyciel strumieni IceCast/ShoutCast
 Name:		darkice
 Version:	0.17.1
 Release:	2
@@ -49,12 +49,12 @@ Vorbis, and sends the MP3 stream to one or more IceCast and/or
 ShoutCast servers, the Ogg Vorbis stream to one or more IceCast2
 servers.
 
-%description -l pl
+%description -l pl.UTF-8
 DarkIce to dostarczyciel strumienia audio IceCast, IceCast2 oraz
-ShoutCast. DarkIce enkoduje dane z karty d¼wiêkowej do MP3 i/lub Ogg
-Vorbis, a nastêpnie wysy³a strumieñ MP3 do jednego lub wiêcej serwerów
-IceCast i/lub ShoutCast, strumieñ Ogg Vorbis do jednego lub wiêcej
-serwerów IceCast2.
+ShoutCast. DarkIce enkoduje dane z karty dÅºwiÄ™kowej do MP3 i/lub Ogg
+Vorbis, a nastÄ™pnie wysyÅ‚a strumieÅ„ MP3 do jednego lub wiÄ™cej serwerÃ³w
+IceCast i/lub ShoutCast, strumieÅ„ Ogg Vorbis do jednego lub wiÄ™cej
+serwerÃ³w IceCast2.
 
 %prep
 %setup -q

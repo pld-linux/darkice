@@ -5,7 +5,7 @@
 # - or some other way to keep realtime scheduling while not running as root
 # - add patch for dropping privs *after* turning on real-time scheduling
 Summary:	DarkIce live IceCast / ShoutCast streamer
-Summary(pl.UTF-8):   DarkIce - dostarczyciel strumieni IceCast/ShoutCast
+Summary(pl.UTF-8):	DarkIce - dostarczyciel strumieni IceCast/ShoutCast
 Name:		darkice
 Version:	0.17.1
 Release:	2
